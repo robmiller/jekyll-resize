@@ -1,4 +1,5 @@
 require 'digest'
+require "mini_magick"
 
 module Jekyll
   module Resize
