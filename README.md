@@ -1,15 +1,24 @@
 # Jekyll Resize
 > Image resizing tag for Jekyll 4
 
+[![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg)](https://ruby-lang.org)
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
+
+
+Create resized images at build time when making a [Jekyll](https://jekyllrb.com) static site.
+
+
+## Sample
+
+```liquid
+{{ image_path | resize: "800x800>" }}
+```
+
+See more details in [Usage](#usage) section.
+
 
 ## About
-
-Create resized images at build time when making a Jekyll static site.
-
-See [Usage](#usage).
-
-
-### Fork details
 
 Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) / [RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize) to add Jekyll 4 support for my projects.
 
@@ -57,6 +66,7 @@ In particular, by updating `.gemspec` to use Jekyll 4 and adding `require "mini_
     $ bundle install
     ```
 
+
 ## Usage
 
 This plugin makes the `resize` tag available.
@@ -80,6 +90,12 @@ Sample Logged output on building a Jekyll site:
 ```
 Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6..._800x800.jpg (800x800>)
 ```
+
+
+## Contributing
+
+Submit a Pull Request if you have improvments.
+
 
 ## Development
 
