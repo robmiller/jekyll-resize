@@ -4,12 +4,12 @@ Gem::Specification.new do |s|
   s.date        = '2020-05-25'
   s.summary     = 'Liquid filter to resize images'
   s.description = ''
-  s.authors     = ['Mike Neumegen']
+  s.authors     = ['Mike Neumegen', 'Michael Currin']
   s.email       = 'mike@cloudcannon.com'
   s.files       = ['lib/jekyll-resize.rb']
   s.homepage    = 'http://rubygems.org/gems/jekyll-resize'
   s.license     = 'MIT'
 
-  s.add_dependency 'jekyll', '> 3.3'
-  s.add_dependency 'mini_magick', "4.8.0"
+  s.add_dependency 'jekyll', '~> 4.0'
+  s.add_dependency 'mini_magick', '~> 4.8'
 end
