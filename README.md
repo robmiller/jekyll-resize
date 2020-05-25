@@ -5,6 +5,10 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
 
+**Supports:**
+
+- [![Jekyll](https://img.shields.io/badge/jekyll-3.3+,_4.x-blue.svg)](https://jekyllrb.com)
+
 
 Create resized images at build time when making a [Jekyll](https://jekyllrb.com) static site.
 
@@ -32,7 +36,7 @@ Notable changes:
 ## Requirements
 
 - Ruby
-- Jekyll 4
+- Jekyll 3 or 4
 - GraphicsMagick
 
 ### Internal dependencies
@@ -54,11 +58,11 @@ Notable changes:
 ### Install project dependencies
 
 1. Recommended - add Jekyll as a project gem:
-  ```ruby
-  source 'https://rubygems.org'
+    ```ruby
+    source 'https://rubygems.org'
 
-  gem 'jekyll', '~> 4.0.1'
-  ```
+    gem 'jekyll', '~> 4.0.1'
+    ```
 1. Add `jekyll-resize` to your project's `Gemfile`:
     ```ruby
     group :jekyll_plugins do
