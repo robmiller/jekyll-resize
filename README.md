@@ -6,15 +6,20 @@ Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-re
 
 ## Requirements
 
-- GraphicsMagick - install with `apt` or `brew`.
+- GraphicsMagick
 - Jekyll 4
 
 
 ## Installation
 
-### Configure
+### Install system dependencies
 
-Add to your project's `Gemfile`:
+Install GraphicsMagick - e.g. using `apt` or `brew`.
+
+
+### Install project dependencies
+
+Add the gem to your project's `Gemfile`:
 
 ```ruby
 group :jekyll_plugins do
