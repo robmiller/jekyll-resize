@@ -12,7 +12,7 @@ Create resized images at build time when making a [Jekyll](https://jekyllrb.com)
 ## Sample
 
 ```liquid
-{{ image_path | resize: "800x800>" }}
+{{ image_path | resize: '800x800>' }}
 ```
 
 See more details in [Usage](#usage) section.
@@ -83,9 +83,9 @@ This plugin makes the `resize` tag available.
 resize: OPTIONS
 ```
 
-Pass an image path to the tag so i can be resized and saved to `cache/resize`.
+Pass an image path to the tag so it can be resized and saved to `cache/resize/`.
 
-For example:
+### Examples
 
 ```liquid
 {{ image_path | resize: "800x800>" }}
@@ -95,10 +95,18 @@ For example:
 [My image]({{ image_path | resize: "800x800>" }})
 ```
 
-Sample output logged on building a Jekyll site:
+### Output
+
+Sample output logged on build:
 
 ```
-Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6..._800x800.jpg (800x800>)
+Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6...5a92_800x800.jpg (800x800>)
+```
+
+Sample filename in `cache/resize/` - it's much longer that this.
+
+```
+c673c80c6...5a92_800x800.jpg
 ```
 
 
