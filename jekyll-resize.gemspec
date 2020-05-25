@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/jekyll-resize'
   s.license       = 'MIT'
 
-  s.add_dependency 'jekyll', '~> 3.3'
+  s.add_dependency 'jekyll', '> 3.3'
   s.add_dependency 'mini_magick', "4.8.0"
 end
