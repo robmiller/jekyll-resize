@@ -66,6 +66,14 @@ In particular, by updating `.gemspec` to use Jekyll 4 and adding `require "mini_
     $ bundle install
     ```
 
+### Configure
+
+Add to your `.gitignore` file:
+
+```
+cache/
+```
+
 
 ## Usage
 
@@ -75,7 +83,9 @@ This plugin makes the `resize` tag available.
 resize: OPTIONS
 ```
 
-### Examples
+Pass an image path to the tag so i can be resized and saved to `cache/resize`.
+
+For example:
 
 ```liquid
 {{ image_path | resize: "800x800>" }}
@@ -85,7 +95,7 @@ resize: OPTIONS
 [My image]({{ image_path | resize: "800x800>" }})
 ```
 
-Sample Logged output on building a Jekyll site:
+Sample output logged on building a Jekyll site:
 
 ```
 Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6..._800x800.jpg (800x800>)
