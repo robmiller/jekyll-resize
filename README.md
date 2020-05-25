@@ -1,16 +1,13 @@
 # Jekyll Resize
-> Image resizing tag for Jekyll 4
+> Image resizing tag for Jekyll 3 and 4
 
 [![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg)](https://ruby-lang.org)
+[![Jekyll](https://img.shields.io/badge/jekyll-3.3+,_4.x-blue.svg)](https://jekyllrb.com)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
 
-**Supports:**
 
-- [![Jekyll](https://img.shields.io/badge/jekyll-3.3+,_4.x-blue.svg)](https://jekyllrb.com)
-
-
-Create resized images at build time when making a [Jekyll](https://jekyllrb.com) static site.
+Create downsized images from your images, at build time when making a [Jekyll](https://jekyllrb.com) static site. This is useful for loading a gallery of thumbnails and then linking to the full-size image as an overlay or separate page.
 
 
 ## Sample
@@ -18,6 +15,8 @@ Create resized images at build time when making a [Jekyll](https://jekyllrb.com)
 ```liquid
 {{ image_path | resize: '800x800>' }}
 ```
+
+This takes care of generating the thumbnail image for you as well as linking to the cached file.
 
 See more details in [Usage](#usage) section.
 
