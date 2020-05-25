@@ -2,7 +2,18 @@
 > Image resizing tag for Jekyll 4
 
 
-Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) to add Jekyll 4 support. In particular, by updating `.gemspec` to use Jekyll 4 and adding `require "mini_magick"` to the `.rb` file to avoid a runtime error not present on Jekyll 3.
+## About
+
+Create resized images at build time when making a Jekyll static site.
+
+See [Usage](#usage).
+
+
+### Fork details
+
+Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) / [RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize) to add Jekyll 4 support for my projects.
+
+In particular, by updating `.gemspec` to use Jekyll 4 and adding `require "mini_magick"` to the `.rb` file to avoid a runtime error not present on Jekyll 3.
 
 
 ## Requirements
@@ -24,7 +35,7 @@ Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-re
 
 - Install GraphicsMagick.
     - [gist instructions](https://gist.github.com/MichaelCurrin/32b88b2c70c59832c922bcf03bdc08c3).
-- Install Ruby and Bundler.
+- Install Ruby and Bundler (recommended) at the user level.
     - [gist instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936).
 
 ### Install project dependencies
@@ -35,13 +46,13 @@ Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-re
 
   gem 'jekyll', '~> 4.0.1'
   ```
-1. Add the gem to your project's `Gemfile`:
+1. Add `jekyll-resize` to your project's `Gemfile`:
     ```ruby
     group :jekyll_plugins do
     gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
     end
     ```
-1. Install your project's gems - using Bundler is recommended.
+1. Install your project's gems.
     ```sh
     $ bundle install
     ```
