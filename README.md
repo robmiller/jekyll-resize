@@ -22,11 +22,11 @@ See more details in [Usage](#usage) section.
 
 Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
 
-Changes:
+Notable changes:
 
 - Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
-- Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error (which was not present on Jekyll 3).
-- Added docs.
+- Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
+- Created README.md file.
 
 
 ## Requirements
