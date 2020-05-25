@@ -5,7 +5,6 @@ Gem::Specification.new do |s|
   s.summary     = 'Liquid filter to resize images'
   s.description = ''
   s.authors     = ['Mike Neumegen', 'Michael Currin']
-  s.email       = 'mike@cloudcannon.com'
   s.files       = ['lib/jekyll-resize.rb']
   s.homepage    = 'http://rubygems.org/gems/jekyll-resize'
   s.license     = 'MIT'
