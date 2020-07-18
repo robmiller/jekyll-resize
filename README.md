@@ -8,15 +8,12 @@
 
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-It will create downsized images from your existing images at build time - resizing only images that need to be resized, providing an easy way to embed the image and allowing and dimensions you wish.
-The full-size image is unaffected.
-
-This flow is useful for loading a gallery of thumbnails. You can then link to the full-size image that comes up as an overlay or standaline image page.
+This easy-to-use filter is useful for loading a gallery of thumbnails quickly. You can then link to each full-size image so that it can come up as a modal overlay or on standalone image page.
 
 
 ## Sample
 
-Add the gem to your Gemfile:
+Add the gem to your Gemfile then install it.
 
 ```ruby
 group :jekyll_plugins do
@@ -24,26 +21,25 @@ group :jekyll_plugins do
 end
 ```
 
-Then use it like this in markdown or HTML:
+Use it like this in markdown or HTML:
 
 ```liquid
 {{ image_path | resize: '800x800>' }}
 ```
 
-This takes care of both generating the thumbnail image for you as well as providing a link to the file.
+That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
 
 See more details in [Usage](#usage) section.
 
 
-## About
+## Features
 
-Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
-
-Notable changes:
-
-- Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
-- Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
-- Created README.md file.
+- create downsized images from your existing images
+- done at build time so thumbnails are always up to date
+- resize only images that need to be resized
+- provides an easy way to embed the image 
+- allow any dimensions you wish.
+- the full-size image is unaffected.
 
 
 ## Requirements
@@ -154,3 +150,11 @@ $ bundle update
 Released under [MIT](/LICENSE).
 
 Original license - [MIT](/LICENSE-source).
+
+Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
+
+Notable changes:
+
+- Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
+- Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
+- Created README.md file.
