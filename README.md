@@ -1,25 +1,36 @@
 # Jekyll Resize
-> Image resizing tag for Jekyll 3 and 4
+> Image resizing filter for Jekyll 3 and 4
 
 [![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg)](https://ruby-lang.org)
 [![Jekyll](https://img.shields.io/badge/jekyll-3.3+,_4.x-blue.svg)](https://jekyllrb.com)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
 
-If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll plugin is for you.
+If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
 It will create downsized images from your existing images at build time - resizing only images that need to be resized, providing an easy way to embed the image and allowing and dimensions you wish.
+The full-size image is unaffected.
 
-This is useful for loading a gallery of thumbnails. You can then link to the full-size image that comes up as an overlay or standaline image page.
+This flow is useful for loading a gallery of thumbnails. You can then link to the full-size image that comes up as an overlay or standaline image page.
 
 
 ## Sample
+
+Add the gem to your Gemfile:
+
+```ruby
+group :jekyll_plugins do
+  gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
+end
+```
+
+Then use it like this in markdown or HTML:
 
 ```liquid
 {{ image_path | resize: '800x800>' }}
 ```
 
-This takes care of generating the thumbnail image for you as well as linking to the cached file.
+This takes care of both generating the thumbnail image for you as well as providing a link to the file.
 
 See more details in [Usage](#usage) section.
 
@@ -65,7 +76,7 @@ Notable changes:
 
     gem 'jekyll', '~> 4.0.1'
     ```
-1. Add `jekyll-resize` to your project's `Gemfile`:
+1. Add `jekyll-resize` to your project's `Gemfile` using a GitHub URL:
     ```ruby
     group :jekyll_plugins do
       gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
@@ -78,7 +89,7 @@ Notable changes:
 
 ### Configure
 
-Add to your `.gitignore` file:
+Add this to your `.gitignore` file:
 
 ```
 cache/
@@ -87,13 +98,15 @@ cache/
 
 ## Usage
 
-This plugin makes the `resize` tag available.
+This plugin makes the `resize` filter available.
 
-```yaml
+It can be used like this:
+
+```
 resize: OPTIONS
 ```
 
-Pass an image path to the tag so it can be resized and saved to `cache/resize/`. The tag will both resize the image and ensure the HTML path points to the generated resized image. 
+Pass an image path to the filter so it can be resized and saved to `cache/resize/`. The filter will both resize the image and ensure the HTML path points to the generated resized image. 
 
 ### Examples
 
