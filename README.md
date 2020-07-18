@@ -8,12 +8,11 @@
 
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-This easy-to-use filter is useful for loading a gallery of thumbnails quickly. You can then link to each full-size image so that it can come up as a modal overlay or on standalone image page.
-
+This easy-to-use filter is will create and link to a thumbnail image so your page can load quickly.
 
 ## Sample usage
 
-Add the gem to your Gemfile then install it.
+Add the gem to your Gemfile and then install it.
 
 ```ruby
 group :jekyll_plugins do
@@ -21,7 +20,7 @@ group :jekyll_plugins do
 end
 ```
 
-Use it like this in markdown or HTML:
+Use the filter like this in markdown or HTML:
 
 ```liquid
 {{ image_path | resize: '800x800>' }}
@@ -32,7 +31,19 @@ That takes care of both generating the thumbnail image for you as well as provid
 See more details in [Usage](#usage) section.
 
 
+### Demo of an image gallery
+
+This filter is especially useful if you have a gallery of say 20 images and loading all full-sized images would be terribly slow. 
+Once you have the thumbnails embedded on the page, you can easily link each to the original full-size image so it can open in a modal overlay or a separate page. 
+
+Here is a Jekyll project that uses this filter for a gallery and allows viewing of then full-size images.
+
+- https://github.com/MichaelCurrin/artists-portfolio
+
+
 ## Features
+
+What this filter can do:
 
 - create downsized images from your existing images
 - done at build time so thumbnails are always up to date
@@ -138,7 +149,7 @@ Submit a Pull Request if you have improveents.
 
 Commit and push changes. You do not need to tag.
 
-Run this in another project to get the latest version of the gem.
+Run this in another project to get the latest version of this gem.
 
 ```sh
 $ bundle update
