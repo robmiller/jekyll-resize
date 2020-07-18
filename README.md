@@ -11,7 +11,7 @@ If your page is loading too slowly because of large images and you can't be both
 This easy-to-use filter is useful for loading a gallery of thumbnails quickly. You can then link to each full-size image so that it can come up as a modal overlay or on standalone image page.
 
 
-## Sample
+## Sample usage
 
 Add the gem to your Gemfile then install it.
 
