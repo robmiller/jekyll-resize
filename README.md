@@ -6,8 +6,11 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
 
+If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll plugin is for you.
 
-Create downsized images from your images, at build time when making a [Jekyll](https://jekyllrb.com) static site. This is useful for loading a gallery of thumbnails and then linking to the full-size image as an overlay or separate page.
+It will create downsized images from your existing images at build time - resizing only images that need to be resized, providing an easy way to embed the image and allowing and dimensions you wish.
+
+This is useful for loading a gallery of thumbnails. You can then link to the full-size image that comes up as an overlay or standaline image page.
 
 
 ## Sample
@@ -65,7 +68,7 @@ Notable changes:
 1. Add `jekyll-resize` to your project's `Gemfile`:
     ```ruby
     group :jekyll_plugins do
-    gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
+      gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
     end
     ```
 1. Install your project's gems.
@@ -86,11 +89,11 @@ cache/
 
 This plugin makes the `resize` tag available.
 
-```
+```yaml
 resize: OPTIONS
 ```
 
-Pass an image path to the tag so it can be resized and saved to `cache/resize/`.
+Pass an image path to the tag so it can be resized and saved to `cache/resize/`. The tag will both resize the image and ensure the HTML path points to the generated resized image. 
 
 ### Examples
 
@@ -119,7 +122,7 @@ c673c80c6...5a92_800x800.jpg
 
 ## Contributing
 
-Submit a Pull Request if you have improvments.
+Submit a Pull Request if you have improveents.
 
 
 ## Development
