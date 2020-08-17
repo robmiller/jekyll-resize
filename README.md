@@ -13,7 +13,9 @@ This easy-to-use filter will create and link to a thumbnail version of your imag
 
 ## Sample usage
 
-Add the gem to your Gemfile and then install it.
+Add this gem to your Gemfile, then install it.
+
+_Note the URL points to this fork on GH and not RubyGems. The original gem is available with `gem 'jekyll-resize'` only but it only supports Jekyll 3._
 
 ```ruby
 group :jekyll_plugins do
