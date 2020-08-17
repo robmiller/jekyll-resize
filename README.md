@@ -13,9 +13,7 @@ This easy-to-use filter will create and link to a thumbnail version of your imag
 
 ## Sample usage
 
-Add this gem to your Gemfile, then install it.
-
-_Note the URL points to this fork on GH and not RubyGems. The original gem is available with `gem 'jekyll-resize'` only but it only supports Jekyll 3._
+Add this gem to your Gemfile.
 
 ```ruby
 group :jekyll_plugins do
@@ -23,7 +21,12 @@ group :jekyll_plugins do
 end
 ```
 
-Use the filter like this in markdown or HTML:
+_Note that the URL points to this fork on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3._
+
+
+Then install with Bundler.
+
+You can use the filter like this in markdown or HTML:
 
 ```liquid
 {{ image_path | resize: '800x800>' }}
