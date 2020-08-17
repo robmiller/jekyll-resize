@@ -8,7 +8,8 @@
 
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-This easy-to-use filter is will create and link to a thumbnail image so your page can load quickly.
+This easy-to-use filter will create and link to a thumbnail version of your image, so your page can load quickly.
+
 
 ## Sample usage
 
@@ -77,7 +78,7 @@ What this filter can do:
 
 ### Install project dependencies
 
-1. Recommended - add Jekyll as a project gem:
+1. Recommended - add Jekyll 3 or 4 as a project gem:
     ```ruby
     source 'https://rubygems.org'
 
