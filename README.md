@@ -158,14 +158,18 @@ Run this in another project to get the latest version of this gem.
 $ bundle update
 ```
 
+## Related projects 
+
+- https://github.com/mmistakes/jekyll-picture-tag
+- https://github.com/rbuchberger/jekyll_picture_tag
+- https://github.com/CloudCannon/jekyll-resize
+
 
 ## License
 
 Released under [MIT](/LICENSE).
 
-Original license - [MIT](/LICENSE-source).
-
-Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
+Original license - [MIT](/LICENSE-source). Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
 
 Notable changes:
 
