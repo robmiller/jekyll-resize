@@ -1,8 +1,8 @@
 # Jekyll Resize
 > Image resizing filter for Jekyll 3 and 4
 
-[![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg)](https://ruby-lang.org)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.3+,_4.x-blue.svg)](https://jekyllrb.com)
+[![Made with Ruby](https://img.shields.io/badge/Ruby-2.x-blue.svg?logo=ruby)](https://ruby-lang.org)
+[![Jekyll](https://img.shields.io/badge/jekyll->=3.3,_4.x-blue.svg?logo=jekyll)](https://jekyllrb.com)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
 
@@ -148,7 +148,7 @@ c673c80c6...5a92_800x800.jpg
 
 ## Contributing
 
-Submit a Pull Request if you have improveents.
+Submit a Pull Request if you have improvements.
 
 
 ## Development
@@ -160,6 +160,7 @@ Run this in another project to get the latest version of this gem.
 ```sh
 $ bundle update
 ```
+
 
 ## Related projects 
 
