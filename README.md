@@ -21,9 +21,6 @@ group :jekyll_plugins do
 end
 ```
 
-_Note that the URL points to this fork on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3._
-
-
 Then install with Bundler.
 
 You can use the filter like this in markdown or HTML:
@@ -82,6 +79,9 @@ What this filter can do:
     - [gist instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936).
 
 ### Install project dependencies
+
+Note that the install URL in step 2 points to this fork repo on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3, hence the reason this fork exists.
+
 
 1. Recommended - add Jekyll 3 or 4 as a project gem:
     ```ruby
