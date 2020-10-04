@@ -123,12 +123,16 @@ Pass an image path to the filter so it can be resized and saved to `cache/resize
 
 ### Examples
 
+Build the URL to a resized image:
+
 ```liquid
 {{ image_path | resize: "800x800>" }}
 ```
 
+In Markdown:
+
 ```liquid
-[My image]({{ image_path | resize: "800x800>" }})
+![My image]({{ image_path | resize: "800x800>" }})
 ```
 
 ### Output
