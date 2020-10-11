@@ -16,13 +16,13 @@ This easy-to-use filter will create and link to a thumbnail version of your imag
 Add the plugin gem to your Gemfile and then install it with Bundler.
 
 ```ruby
-gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
+gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
 ```
 
 Now you can use the filter like this, in markdown or HTML:
 
 ```liquid
-{{ image_path | resize: '800x800>' }}
+{{ image_path | resize: "800x800>" }}
 ```
 
 That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
@@ -82,12 +82,12 @@ Note that the install URL in step 2 points to this fork repo on GH and not to Ru
     ```ruby
     source 'https://rubygems.org'
 
-    gem 'jekyll', '~> 4.0.1'
+    gem "jekyll", "~> 4.0.1"
     ```
 1. Add `jekyll-resize` to your project's `Gemfile` using a GitHub URL:
     ```ruby
     group :jekyll_plugins do
-      gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
+      gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
     end
     ```
 1. Install your project's gems.
@@ -163,9 +163,9 @@ $ bundle update
 
 ## Related projects 
 
-- https://github.com/mmistakes/jekyll-picture-tag
-- https://github.com/rbuchberger/jekyll_picture_tag
-- https://github.com/CloudCannon/jekyll-resize
+- [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) - the original for this repo.
+- [rbuchberger/jekyll_picture_tag](https://github.com/rbuchberger/jekyll_picture_tag)
+- [mmistakes/jekyll-picture-tag](https://github.com/mmistakes/jekyll-picture-tag) - a fork of the above by `@mmistakes`.
 
 
 ## License
@@ -178,4 +178,4 @@ Notable changes:
 
 - Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
 - Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
-- Created README.md file.
+- Created this `README.md` file.
