@@ -13,17 +13,13 @@ This easy-to-use filter will create and link to a thumbnail version of your imag
 
 ## Sample usage
 
-Add this gem to your Gemfile.
+Add the plugin gem to your Gemfile and then install it with Bundler.
 
 ```ruby
-group :jekyll_plugins do
-  gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
-end
+gem 'jekyll-resize', git: 'https://github.com/MichaelCurrin/jekyll-resize'
 ```
 
-Then install with Bundler.
-
-You can use the filter like this in markdown or HTML:
+Now you can use the filter like this, in markdown or HTML:
 
 ```liquid
 {{ image_path | resize: '800x800>' }}
@@ -48,12 +44,12 @@ Here is a Jekyll project that uses this filter for a gallery and allows viewing 
 
 What this filter can do:
 
-- create downsized images from your existing images
-- done at build time so thumbnails are always up to date
-- resize only images that need to be resized
-- provides an easy way to embed the image 
-- allow any dimensions you wish.
-- the full-size image is unaffected.
+- Create downsized images from your existing images
+- Resizing is done at build time so thumbnails are always up to date
+- Resize only images that need to be resized
+- Provides an easy way to embed the image 
+- Allow any dimensions you wish.
+- The full-size image is preserved.
 
 
 ## Requirements
@@ -82,8 +78,7 @@ What this filter can do:
 
 Note that the install URL in step 2 points to this fork repo on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3, hence the reason this fork exists.
 
-
-1. Recommended - add Jekyll 3 or 4 as a project gem:
+1. Recommended - add either Jekyll 3 or 4 as a project gem:
     ```ruby
     source 'https://rubygems.org'
 
