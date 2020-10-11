@@ -47,8 +47,13 @@ Note that the install URL in step 2 points to this fork repo on GH and not to Ru
 
 ## Configure
 
-Add this to your `.gitignore` file:
+The resized image output is saved to a temporary cache directory at build time.
+
+This directory should be added to your ignore file.
 
 ```
 cache/
 ```
+
+Note that this does not start with a dot for underscore and therefore Jekyll will still pick this directory up and add it to `_site`.
+
