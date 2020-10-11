@@ -2,6 +2,19 @@
 > How to setup jekyll-resize in to your project
 
 
+## Requirements
+
+- Ruby
+- Jekyll 3 or 4
+- GraphicsMagick
+
+### Internal dependencies
+
+- [minimagick/minimagick](https://github.com/minimagick/minimagick)
+    - "A ruby wrapper for ImageMagick or GraphicsMagick command line."
+    - Sample use is covered in the readme - e.g. `image.resize "100x100"`.
+
+
 ## Install system dependencies
 
 - Install GraphicsMagick.
