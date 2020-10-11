@@ -27,7 +27,7 @@ Now you can use the filter like this, in markdown or HTML:
 
 That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
 
-See more details in [Usage](#usage) section.
+See more details in the [Usage](/docs/usage.md) part of the docs.
 
 
 ### Demo of an image gallery
@@ -44,121 +44,23 @@ Here is a Jekyll project that uses this filter for a gallery and allows viewing 
 
 What this filter can do:
 
-- Create downsized images from your existing images
-- Resizing is done at build time so thumbnails are always up to date
-- Resize only images that need to be resized
-- Provides an easy way to embed the image 
+- Create downsized images from your existing images.
+- Resizing is done at build time so thumbnails are always up to date.
+- Resize only images that need to be resized.
+- Provides an easy way to embed the image.
 - Allow any dimensions you wish.
 - The full-size image is preserved.
+- Validates images - you'll get an error at build time.
 
 
-## Requirements
+## Documentation
 
-- Ruby
-- Jekyll 3 or 4
-- GraphicsMagick
-
-### Internal dependencies
-
-- [minimagick/minimagick](https://github.com/minimagick/minimagick)
-    - > A ruby wrapper for ImageMagick or GraphicsMagick command line.
-    - Sample use is covered in the readme - e.g. `image.resize "100x100"`.
-
-
-## Installation
-
-### Install system dependencies
-
-- Install GraphicsMagick.
-    - [gist instructions](https://gist.github.com/MichaelCurrin/32b88b2c70c59832c922bcf03bdc08c3).
-- Install Ruby and Bundler (recommended) at the user level.
-    - [gist instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936).
-
-### Install project dependencies
-
-Note that the install URL in step 2 points to this fork repo on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3, hence the reason this fork exists.
-
-1. Recommended - add either Jekyll 3 or 4 as a project gem:
-    ```ruby
-    source 'https://rubygems.org'
-
-    gem "jekyll", "~> 4.0.1"
-    ```
-1. Add `jekyll-resize` to your project's `Gemfile` using a GitHub URL:
-    ```ruby
-    group :jekyll_plugins do
-      gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
-    end
-    ```
-1. Install your project's gems.
-    ```sh
-    $ bundle install
-    ```
-
-### Configure
-
-Add this to your `.gitignore` file:
-
-```
-cache/
-```
-
-
-## Usage
-
-This plugin makes the `resize` filter available.
-
-It can be used like this:
-
-```
-resize: OPTIONS
-```
-
-Pass an image path to the filter so it can be resized and saved to `cache/resize/`. The filter will both resize the image and ensure the HTML path points to the generated resized image. 
-
-### Examples
-
-Build the URL to a resized image:
-
-```liquid
-{{ image_path | resize: "800x800>" }}
-```
-
-In Markdown:
-
-```liquid
-![My image]({{ image_path | resize: "800x800>" }})
-```
-
-### Output
-
-Sample output logged on build:
-
-```
-Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6...5a92_800x800.jpg (800x800>)
-```
-
-Sample filename in `cache/resize/` - it's much longer that this.
-
-```
-c673c80c6...5a92_800x800.jpg
-```
+See [docs](/docs/).
 
 
 ## Contributing
 
 Submit a Pull Request if you have improvements.
-
-
-## Development
-
-Commit and push changes. You do not need to tag.
-
-Run this in another project to get the latest version of this gem.
-
-```sh
-$ bundle update
-```
 
 
 ## Related projects 
@@ -178,4 +80,4 @@ Notable changes:
 
 - Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
 - Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
-- Created this `README.md` file.
+- Created this `README.md` file and the [docs](/docs) directory.
