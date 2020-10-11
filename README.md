@@ -11,6 +11,19 @@ If your page is loading too slowly because of large images and you can't be both
 This easy-to-use filter will create and link to a thumbnail version of your image, so your page can load quickly.
 
 
+## Features
+
+What this filter can do:
+
+- Create downsized images from your existing images.
+- Resizing is done at build time so thumbnails are always up to date.
+- Resize only images that need to be resized.
+- Provides an easy way to embed the image.
+- Allow any dimensions you wish.
+- The full-size image is preserved.
+- Validates images - you'll get an error at build time.
+
+
 ## Sample usage
 
 Add the plugin gem to your Gemfile and then install it with Bundler.
@@ -30,7 +43,8 @@ That takes care of both generating the thumbnail image for you as well as provid
 See more details in the [Usage](/docs/usage.md) part of the docs.
 
 
-### Demo of an image gallery
+## Demo
+> Showcasing this plugin in an image gallery Jekyll site
 
 This filter is especially useful if you have a gallery of say 20 images and loading all full-sized images would be terribly slow. 
 Once you have the thumbnails embedded on the page, you can easily link each to the original full-size image so it can open in a modal overlay or a separate page. 
@@ -38,19 +52,6 @@ Once you have the thumbnails embedded on the page, you can easily link each to t
 Here is a Jekyll project that uses this filter for a gallery and allows viewing of then full-size images.
 
 - https://github.com/MichaelCurrin/artists-portfolio
-
-
-## Features
-
-What this filter can do:
-
-- Create downsized images from your existing images.
-- Resizing is done at build time so thumbnails are always up to date.
-- Resize only images that need to be resized.
-- Provides an easy way to embed the image.
-- Allow any dimensions you wish.
-- The full-size image is preserved.
-- Validates images - you'll get an error at build time.
 
 
 ## Documentation
