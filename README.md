@@ -29,10 +29,12 @@ What this filter can do:
 Add the plugin gem to your Gemfile and then install it with Bundler.
 
 ```ruby
-gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
+group :jekyll_plugins do
+  gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
+end
 ```
 
-Now you can use the filter like this, in markdown or HTML:
+Now you can use the `resize` filter in your markdown or HTML:
 
 ```liquid
 {{ image_path | resize: "800x800>" }}
@@ -51,7 +53,7 @@ Once you have the thumbnails embedded on the page, you can easily link each to t
 
 Here is a Jekyll project that uses this filter for a gallery and allows viewing of then full-size images.
 
-- https://github.com/MichaelCurrin/artists-portfolio
+[![MichaelCurrin - artists-portfolio](https://img.shields.io/static/v1?label=MichaelCurrin&message=artists-portfolio&color=blue&logo=github)](https://github.com/MichaelCurrin/artists-portfolio)
 
 
 ## Documentation
