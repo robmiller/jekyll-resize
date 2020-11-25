@@ -45,6 +45,11 @@ That takes care of both generating the thumbnail image for you as well as provid
 See more details in the [Usage](/docs/usage.md) part of the docs.
 
 
+## Documentation
+
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue)](/docs/)
+
+
 ## Demo
 > Showcase of using this plugin in an image gallery Jekyll site
 
@@ -56,21 +61,16 @@ Here is a Jekyll project that uses this filter for a gallery and allows viewing 
 [![MichaelCurrin - artists-portfolio](https://img.shields.io/static/v1?label=MichaelCurrin&message=artists-portfolio&color=blue&logo=github)](https://github.com/MichaelCurrin/artists-portfolio)
 
 
-## Documentation
-
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue)](/docs/)
-
-
-## Contributing
-
-Submit a Pull Request or issue if you have improvements or fixes to suggest.
-
-
 ## Related projects 
 
 - [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) - the original for this repo.
 - [rbuchberger/jekyll_picture_tag](https://github.com/rbuchberger/jekyll_picture_tag)
 - [mmistakes/jekyll-picture-tag](https://github.com/mmistakes/jekyll-picture-tag) - a fork of the above by `@mmistakes`.
+
+
+## Contributing
+
+Submit a Pull Request or issue if you have improvements or fixes to suggest.
 
 
 ## License
