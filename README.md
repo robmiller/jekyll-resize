@@ -44,7 +44,7 @@ See more details in the [Usage](/docs/usage.md) part of the docs.
 
 
 ## Demo
-> Showcasing this plugin in an image gallery Jekyll site
+> Showcase of using this plugin in an image gallery Jekyll site
 
 This filter is especially useful if you have a gallery of say 20 images and loading all full-sized images would be terribly slow. 
 Once you have the thumbnails embedded on the page, you can easily link each to the original full-size image so it can open in a modal overlay or a separate page. 
@@ -56,12 +56,12 @@ Here is a Jekyll project that uses this filter for a gallery and allows viewing 
 
 ## Documentation
 
-See [docs](/docs/).
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue)](/docs/)
 
 
 ## Contributing
 
-Submit a Pull Request if you have improvements.
+Submit a Pull Request or issue if you have improvements or fixes to suggest.
 
 
 ## Related projects 
