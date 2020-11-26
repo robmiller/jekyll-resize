@@ -27,13 +27,13 @@
 
 Note that the install URL in step 2 points to this fork repo on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3, hence the reason this fork exists.
 
-1. Recommended - add either Jekyll 3 or 4 as a project gem:
+1. Recommended - add either Jekyll 3 or 4 as a project gem in `Gemfile`.
     ```ruby
     source 'https://rubygems.org'
 
     gem "jekyll", "~> 4.0.1"
     ```
-1. Add `jekyll-resize` to your project's `Gemfile` using a GitHub URL:
+1. Add `jekyll-resize` to your project's `Gemfile` using a GitHub URL.
     ```ruby
     group :jekyll_plugins do
       gem "jekyll-resize", git: "https://github.com/MichaelCurrin/jekyll-resize"
@@ -44,16 +44,15 @@ Note that the install URL in step 2 points to this fork repo on GH and not to Ru
     $ bundle install
     ```
 
+Note you do not have to enabel a gem to your `plugins` list in the config if it appears in the plugins group as above.
+
 
 ## Configure
 
 The resized image output is saved to a temporary cache directory at build time.
 
-This directory should be added to your ignore file.
+This directory should be added to your git ignore file:
 
 ```
 cache/
 ```
-
-Note that this does not start with a dot for underscore and therefore Jekyll will still pick this directory up and add it to `_site`.
-
