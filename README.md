@@ -1,5 +1,5 @@
 # Jekyll Resize
-> Image resizing filter for Jekyll 3 and 4
+> Easy image resizing filter for Jekyll 3 and 4
 
 [![Made with Ruby](https://img.shields.io/badge/Ruby->=2.6-blue.svg?logo=ruby)](https://ruby-lang.org)
 [![Jekyll](https://img.shields.io/badge/jekyll->=3.3,_4.x-blue.svg?logo=jekyll)](https://jekyllrb.com)
