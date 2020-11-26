@@ -4,15 +4,17 @@
 
 ## Requirements
 
+- GraphicsMagick
 - Ruby >= 2.6
 - Jekyll 3 or 4
-- GraphicsMagick
 
 ### Internal dependencies
 
-- [minimagick/minimagick](https://github.com/minimagick/minimagick)
-    - "A ruby wrapper for ImageMagick or GraphicsMagick command line."
-    - Sample use is covered in the readme - e.g. `image.resize "100x100"`.
+When you install this project's gems, you will get minimagick installed. Some background details are covered here.
+
+- Repo: [minimagick/minimagick](https://github.com/minimagick/minimagick)
+- "A ruby wrapper for ImageMagick or GraphicsMagick command line."
+- Sample use is covered in the readme - e.g. `image.resize "100x100"`.
 
 
 ## Install system dependencies
