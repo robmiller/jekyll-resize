@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- Ruby
+- Ruby >= 2.6
 - Jekyll 3 or 4
 - GraphicsMagick
 
