@@ -1,7 +1,7 @@
 # Jekyll Resize
 > Image resizing filter for Jekyll 3 and 4
 
-[![Made with Ruby](https://img.shields.io/badge/Ruby-2.x-blue.svg?logo=ruby)](https://ruby-lang.org)
+[![Made with Ruby](https://img.shields.io/badge/Ruby->=2.6-blue.svg?logo=ruby)](https://ruby-lang.org)
 [![Jekyll](https://img.shields.io/badge/jekyll->=3.3,_4.x-blue.svg?logo=jekyll)](https://jekyllrb.com)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
@@ -51,7 +51,7 @@ See more details in the [Usage](/docs/usage.md) part of the docs.
 
 
 ## Demo
-> Showcase of using this plugin in an image gallery Jekyll site
+> See the plugin use in a Jekyll site
 
 This filter is especially useful if you have a gallery of say 20 images and loading all full-sized images would be terribly slow. 
 Once you have the thumbnails embedded on the page, you can easily link each to the original full-size image so it can open in a modal overlay or a separate page. 
