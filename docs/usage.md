@@ -8,7 +8,7 @@ It can be used like this:
 resize: OPTIONS
 ```
 
-The options could be `"800x800"` or "800x800>" for example, setting width and height and using the greater than sign.
+The options could be `"800x800"` or `"800x800>"` for example, setting width and height and using the greater than sign.
 
 Pass an image path to the filter so it can be resized and saved to `cache/resize/`. 
 
