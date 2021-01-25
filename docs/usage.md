@@ -38,7 +38,7 @@ Sample output logged on build:
 Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6...5a92_800x800.jpg (800x800>)
 ```
 
-Sample filename in `cache/resize/`. The real is much longer.
+The filename in `cache/resize/` will be like this but longer.
 
 ```
 c673c80c6...5a92_800x800.jpg
