@@ -49,7 +49,7 @@ See more details in the [Usage](/docs/usage.md) part of the docs.
 
 ## Documentation
 
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue)](/docs/)
+[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
 
 
 ## Demo
