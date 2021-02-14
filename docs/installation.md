@@ -4,17 +4,17 @@
 
 ## Requirements
 
-- GraphicsMagick
-- Ruby >= 2.6
-- Jekyll 3 or 4
+- [GraphicsMagick](http://www.graphicsmagick.org/)
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Jekyll](https://jekyllrb.com)
 
 ### Internal dependencies
 
-When you install this project's gems, you will get minimagick installed. Some background details are covered here.
+When you install this project's gems, you will get **minimagick** installed. Some background details are covered here.
 
 - Repo: [minimagick/minimagick](https://github.com/minimagick/minimagick)
-- "A ruby wrapper for ImageMagick or GraphicsMagick command line."
-- Sample use is covered in the readme - e.g. `image.resize "100x100"`.
+- > "A ruby wrapper for ImageMagick or GraphicsMagick command line."
+- Sample syntax is covered in the readme - e.g. `image.resize "100x100"`.
 
 
 ## Install system dependencies
@@ -25,7 +25,7 @@ When you install this project's gems, you will get minimagick installed. Some ba
     - [gist instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936).
 
 
-## Install project dependencies
+## Install project packages
 
 Note that the install URL in step 2 points to this fork repo on GH and not to RubyGems. The original gem is available on RubyGems with `gem 'jekyll-resize'`, but it only supports Jekyll 3, hence the reason this fork exists.
 
