@@ -23,13 +23,13 @@ module Jekyll
       destination += destination_file_name
 
       if !File.exist?(destination) || File.mtime(destination) <= File.mtime(source_path)
-
         puts "Thumbnailing #{source_path} to #{destination} (#{options})"
 
         image = MiniMagick::Image.open(source_path)
         image.strip
         image.resize options
         image.write destination
+        
         site.static_files << Jekyll::StaticFile.new(site, site.source, destination_path, destination_file_name)
       end
 
