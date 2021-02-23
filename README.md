@@ -60,14 +60,19 @@ Once you have the thumbnails embedded on the page, you can easily link each to t
 
 Here is a Jekyll project that uses this filter for a gallery and allows viewing of then full-size images.
 
-[![MichaelCurrin - artists-portfolio](https://img.shields.io/static/v1?label=MichaelCurrin&message=artists-portfolio&color=blue&logo=github)](https://github.com/MichaelCurrin/artists-portfolio)
+- [![MichaelCurrin - artists-portfolio](https://img.shields.io/static/v1?label=MichaelCurrin&message=artists-portfolio&color=blue&logo=github)](https://github.com/MichaelCurrin/artists-portfolio)
 
 
 ## Related projects 
 
-- [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) - the original for this repo.
-- [rbuchberger/jekyll_picture_tag](https://github.com/rbuchberger/jekyll_picture_tag)
-- [mmistakes/jekyll-picture-tag](https://github.com/mmistakes/jekyll-picture-tag) - a fork of the above by `@mmistakes`.
+- [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize)
+    - The original source for this fork repo. No activity there since I've forked.
+- [rbuchberger/jekyll_picture_tag](https://github.com/rbuchberger/jekyll_picture_tag) 
+    - Another gem to resize images. 
+    - It is more complex but has more features like generating multiple resized images and setting `srcset` attribute in the `img` tag. So the browser can pick the optimal image to fetch.
+    - See [srcset](https://html.com/attributes/img-srcset/) guide.
+- [mmistakes/jekyll-picture-tag](https://github.com/mmistakes/jekyll-picture-tag) 
+    - A fork of the above, by `@mmistakes`.
 
 
 ## Contributing
@@ -85,4 +90,4 @@ Notable changes:
 
 - Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
 - Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
-- Created this `README.md` file and the [docs](/docs) directory.
+- Created this `README.md` file and the [docs](/docs/) directory.
