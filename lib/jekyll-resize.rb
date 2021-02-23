@@ -7,7 +7,7 @@ module Jekyll
       site = @context.registers[:site]
 
       source_path = site.source + source
-      raise "#{source_[path]} is not readable" unless File.readable?(source_path)
+      raise "#{source_path} is not readable" unless File.readable?(source_path)
 
       destination_path = "/cache/resize/"
       destination = site.source + destination_path
