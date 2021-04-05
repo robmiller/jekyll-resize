@@ -1,5 +1,5 @@
 # Jekyll Resize 🖼 🤏 🔬
-> Build-time image resizing made easy with a Jekyll filter - supports Jekyll 3 and 4
+> Simple image resizing tag for Jekyll 3 and 4
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
@@ -10,7 +10,7 @@
 
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-This easy-to-use filter will create and link to a thumbnail version of your image, so your page can load quickly.
+At build time (`jekyll build` or `jekyll serve`), this easy-to-use tag will create a thumbnail version of your image in a cache directory and link to it, so your page can load faster.
 
 
 ## Features
@@ -44,7 +44,7 @@ Now you can use the `resize` filter in your markdown or HTML:
 
 That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
 
-See more details in the [Usage](/docs/usage.md) part of the docs.
+See the [Usage](/docs/usage.md) part of the docs for more info and how to that for `img` tags in HTML.
 
 
 ## Documentation
