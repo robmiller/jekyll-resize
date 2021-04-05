@@ -1,5 +1,5 @@
 # Jekyll Resize 🖼 🤏 🔬
-> Easy image resizing filter for Jekyll 3 and 4
+> Build-time image resizing made easy with a Jekyll filter - supports Jekyll 3 and 4
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/jekyll-resize)](https://github.com/MichaelCurrin/jekyll-resize/tags/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/jekyll-resize/blob/master/LICENSE)
@@ -84,7 +84,9 @@ Submit a Pull Request or issue if you have improvements or fixes to suggest.
 
 Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
 
-Original license - [MIT](/LICENSE-source). Forked from [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) ([RubyGems jekyll-resize](https://rubygems.org/gems/jekyll-resize)) to add Jekyll 4 support for my projects.
+Original license - [MIT](/LICENSE-source). 
+
+This project was forked from the [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) repo ([jekyll-resize](https://rubygems.org/gems/jekyll-resize) on RubyGems). So that I could use this in my Jekyll 4 project and so others can too.
 
 Notable changes:
 
