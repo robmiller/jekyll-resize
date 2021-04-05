@@ -10,7 +10,9 @@
 
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-At build time (`jekyll build` or `jekyll serve`), this easy-to-use tag will create a thumbnail version of your image in a cache directory and link to it, so your page can load faster.
+When running `jekyll build` or `jekyll serve`, this easy-to-use filter will create a smaller version of your image in a cache directory and link to it, so your page can load faster.
+
+Use it for thumbnails. Ort to create versions of your images that are like 800px wide and under 1MB - while still keeping the original full-size images untouched in the repo.
 
 
 ## Sample usage
