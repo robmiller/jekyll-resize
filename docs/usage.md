@@ -61,3 +61,28 @@ image_path: assets/img/hello.jpg
 
 <img src="{{ page.image_path | resize: '800x800>' | relative_url }}" alt="My image" />
 ```
+
+
+## Building
+
+After setting up your original images such as in `assets` and setting up your HTML and markdown pages, you can build your site to use the plugin.
+
+When you run `jekyll build` or `jekyll serve`, you'll see the plugin will log the activity.
+
+Here is says it is reducing an image, showing the original path and then the destination path. The original is untouched. 
+
+```
+Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6...5a92_800x800.jpg (800x800>)
+```
+
+The file that gets created has output path has a hash like the one below, but much longer.
+
+```
+c673c80c6...5a92_800x800.jpg
+```
+
+So you change the output size of the image as many times as you like - you'll get a new output image created.
+
+The output `cache/resize/` directory will be created if necessary and the image will be created in there. 
+
+This `cache` directory would be **excluded** from version control - the output image only matters when building and deploying and you don't need to track the output files.
