@@ -25,13 +25,15 @@ group :jekyll_plugins do
 end
 ```
 
-Now you can use the `resize` filter in your markdown or HTML for the `src` of an `img` tag.
+Now you can use the `resize` filter in your markdown or HTML, for a JPEG or PNG file.
 
 ```liquid
-{{ image_path | resize: "800x800>" }}
+{{ "my-image.png" | resize: "800x800>" }}
 ```
 
 That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
+
+See the docs linked below for example using with a `img` HTML tag.
 
 
 ## Documentation
