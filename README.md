@@ -37,7 +37,7 @@ See the docs linked below for example using with a `img` HTML tag.
 
 
 ## Documentation
-> How to install the plugin and guide to using it
+> How to install and use the plugin
 
 <div align="center">
   
@@ -48,7 +48,7 @@ See the docs linked below for example using with a `img` HTML tag.
 
 ## Contributing
 
-Submit a Pull Request or issue if you have improvements or fixes to suggest. I didn't create this plugin, so I don't have a deep understanding of the libraries or implementation. I just adapted the plugin as a fork that I can use for my projects.
+See [Contributing](/CONTRIBUTING.md) doc.
 
 
 ## License
