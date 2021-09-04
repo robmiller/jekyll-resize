@@ -8,11 +8,15 @@
 [![Jekyll](https://img.shields.io/badge/jekyll->=3.3,_4.x-blue.svg?logo=jekyll)](https://jekyllrb.com)
 
 
+## Use-cases
+
 If your page is loading too slowly because of large images and you can't be bothered to manually create thumbnails (images with reduced dimensions), then this Jekyll filter is for you.
 
-When running `jekyll build` or `jekyll serve`, this easy-to-use filter will create a smaller version of your image in a cache directory and link to it, so your page can load faster.
+When running `jekyll build` or `jekyll serve`, this easy-to-use filter will create a smaller version of your image in a cache directory and link to it, so your page can load faster. The cache is generated fresh on each site build, so you don't clutter your version control with duplicate images.
 
-Use it for thumbnails. Ort to create versions of your images that are like 800px wide and under 1MB - while still keeping the original full-size images untouched in the repo.
+Use it for thumbnails.
+
+Or for reducing images to a suitable size for the web. e.g. create versions of your images that are say 800px wide and probably under 1MB, while still keeping the original full-size images untouched in the repo.
 
 
 ## Sample usage
