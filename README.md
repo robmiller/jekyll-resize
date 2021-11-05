@@ -29,7 +29,7 @@ group :jekyll_plugins do
 end
 ```
 
-Now you can use the `resize` filter in your markdown or HTML, for a JPEG or PNG file.
+Now you can use the `resize` filter in your markdown or HTML, for a JPEG or PNG file. Here the max height and max width are 800 pixels:
 
 ```liquid
 {{ "my-image.png" | resize: "800x800>" }}
