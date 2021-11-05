@@ -14,9 +14,13 @@ If your page is loading too slowly because of large images and you can't be both
 
 When running `jekyll build` or `jekyll serve`, this easy-to-use filter will create a smaller version of your image in a cache directory and link to it, so your page can load faster. The cache is generated fresh on each site build, so you don't clutter your version control with duplicate images.
 
-Use it for thumbnails.
+Use it for:
 
-Or for reducing images to a suitable size for the web. e.g. create versions of your images that are say 800px wide and probably under 1MB, while still keeping the original full-size images untouched in the repo.
+- making a batch of **thumbnails**.
+- reducing images to a suitable size for the **web**.
+    - Such as create versions of your images that are say 800px wide and probably under 1MB, while still keeping the original full-size images untouched in the repo. 
+    - And you can always let the user view the full-size image if you want them to, like click on a small image and see the full image. 
+    - You could also make _multiple_ resized versions of an image. e.g. A small and medium version - say 400px wide and 1000px wide, so the user doesn't have wait for 4000px wide to load.
 
 
 ## Sample usage
@@ -29,15 +33,18 @@ group :jekyll_plugins do
 end
 ```
 
-Now you can use the `resize` filter in your markdown or HTML, for a JPEG or PNG file. Here the max height and max width are 800 pixels:
+Now the `resize` filter is available in Liquid (in your Markdown and HTML) and you can use it for a JPEG or PNG file. Here the max width and max height are 800 pixels:
 
 ```liquid
 {{ "my-image.png" | resize: "800x800>" }}
 ```
 
-That takes care of both generating the thumbnail image for you as well as providing a link to the file - magic.
+That takes care of:
 
-See the docs linked below for example using with a `img` HTML tag.
+- _generating_ the reduced image.
+- providing a _link_ to the file.
+
+See the docs linked below for a more detailed example using the filter with an `img` HTML tag.
 
 
 ## Documentation
