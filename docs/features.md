@@ -9,3 +9,7 @@ What this filter can do:
 - Allow any dimensions you wish.
 - The full-size image is preserved.
 - Validates images - you'll get an error at build time.
+
+This plugin uses this gem internally:
+
+- [mini_magick](https://michaelcurrin.github.io/dev-resources/resources/ruby/gems/mini-magick.html)
