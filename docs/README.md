@@ -2,6 +2,7 @@
 > Simple image resizing filter for Jekyll 3 and 4
 
 - [Features](features.md)
+- [Use-cases](use-cases.md)
 - [Demo](demo.md)
 - [Installation](installation.md)
 - [Usage](usage.md)
