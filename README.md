@@ -33,7 +33,7 @@ See the docs linked below for a more detailed example using the filter with an `
 
 
 ## Documentation
-> How to install and use the plugin
+> Why you should use this plugin and how to install and use it in a Jekyll project
 
 <div align="center">
   
