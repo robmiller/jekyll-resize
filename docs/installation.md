@@ -8,14 +8,6 @@
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Jekyll](https://jekyllrb.com)
 
-### Internal dependencies
-
-When you install this project's gems, you will get **minimagick** installed. Some background details are covered here.
-
-- Repo: [minimagick/minimagick](https://github.com/minimagick/minimagick)
-- > "A ruby wrapper for ImageMagick or GraphicsMagick command line."
-- Sample syntax is covered in the readme - e.g. `image.resize "100x100"`.
-
 
 ## Install system dependencies
 
