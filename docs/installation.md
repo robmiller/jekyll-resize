@@ -38,7 +38,7 @@ Note that the install URL in step 2 points to this fork repo on GH and not to Ru
     $ bundle install
     ```
 
-Note you do not have to enabel a gem to your `plugins` list in the config if it appears in the plugins group as above.
+Note you do not have to enable a gem to your `plugins` list in the config if it appears in the plugins group as above.
 
 
 ## Configure

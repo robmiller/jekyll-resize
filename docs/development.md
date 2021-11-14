@@ -10,7 +10,7 @@ $ git clone git@github.com:MichaelCurrin/jekyll-resize.git
 $ cd jekyll-resize
 ```
 
-There are no dependencies to install.
+The plugin depends on `jekyll` and `mini_magick` - these will be installed when the plugin is installed from the [jekyll-resize.gemspec](../jekyll-resize.gemspec) file.
 
 
 ## Build
