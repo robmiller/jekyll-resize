@@ -20,12 +20,10 @@ module Jekyll
     end
 
     # Generate output image filename.
-    #
-    # e.g. '7f1f9026239...821410_800x800.jpg'
-    def _dest_filename(src_path, dest_dir, options)
+    def _dest_filename(src_path, options, dest_dir)
       hash = Digest::SHA256.file(src_path)
       short_hash = hash.hexdigest()[0, HASH_LENGTH]
-      options_slug = options.gsub(/[^\da-z]+/i, '')
+      options_slug = options.gsub(/[^\da-z]+/i, "")
 
       "#{short_hash}_#{options_slug}#{FILE_EXT}"
     end
@@ -48,7 +46,7 @@ module Jekyll
       dest_dir = File.join(site.source, CACHE_DIR)
       FileUtils.mkdir_p dest_dir
 
-      dest_filename = _dest_filename(src_path, dest_dir, options)
+      dest_filename = _dest_filename(src_path, options, dest_dir)
 
       dest_path = File.join(dest_dir, dest_filename)
       dest_path_rel = File.join(CACHE_DIR, dest_filename)
