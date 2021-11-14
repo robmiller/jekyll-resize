@@ -5,6 +5,7 @@ module Jekyll
   module Resize
     DEST_DIR = "cache/resize/"
 
+    # Read, process, and write out as new image.
     def _process_img(src_path, options, dest_path)
       image = MiniMagick::Image.open(src_path)
 
@@ -14,9 +15,10 @@ module Jekyll
       image.write dest_path
     end
 
-    def _dest_filename(src_path, options, dest_dir)
-      # Return value like '7f1f9026239...821410_800x800.jpg'
-
+    # Generate output image filename.
+    #
+    # e.g. '7f1f9026239...821410_800x800.jpg'
+    def _dest_filename(src_path, dest_dir, options)
       hash = Digest::SHA256.file src_path
       img_slug = options.gsub(/[^\da-z]+/i, '')
       extension = File.extname(src_path)
@@ -24,9 +26,13 @@ module Jekyll
       "#{hash}_#{img_slug}#{extension}"
     end
 
+    # Liquid tag entry-point.
+    #
+    # param source: e.g. "my-image.jpg"
+    # param options: e.g. "800x800>"
+    #
+    # return dest_path_relative: Relative path for output file.
     def resize(source, options)
-      # e.g. "my-image.jpg" and "800x800>".
-
       site = @context.registers[:site]
 
       src_path = File.join(site.source, source)
@@ -35,7 +41,7 @@ module Jekyll
       dest_dir = File.join(site.source, DEST_DIR)
       FileUtils.mkdir_p dest_dir
 
-      dest_filename = _dest_filename(src_path, options, dest_dir)
+      dest_filename = _dest_filename(src_path, dest_dir, options)
       dest_path = File.join(dest_dir, dest_filename)
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
