@@ -10,7 +10,7 @@
 
 ## Sample usage
 
-Add the plugin gem to your Gemfile and then install it with Bundler.
+Add the plugin gem to your Gemfile as below, then install it with Bundler.
 
 ```ruby
 group :jekyll_plugins do
@@ -18,7 +18,9 @@ group :jekyll_plugins do
 end
 ```
 
-Now the `resize` filter is available in Liquid (in your Markdown and HTML) and you can use it for a JPEG or PNG file. Here the max width and max height are 800 pixels:
+The `resize` filter will be available in Liquid (in your Markdown and HTML) so you can use it for a JPEG or PNG file.
+
+Here we resize an image to max width and max height of 800 pixels:
 
 ```liquid
 {{ "my-image.png" | resize: "800x800>" }}
@@ -29,14 +31,14 @@ That takes care of:
 - _generating_ the reduced image.
 - providing a _link_ to the file.
 
-See the docs linked below for a more detailed example using the filter with an `img` HTML tag.
+See the docs linked below for a more detailed example using the filter with an HTML `img` tag.
 
 
 ## Documentation
 > Why you should use this plugin and how to install and use it in a Jekyll project
 
 <div align="center">
-  
+
 [![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/ "Go to docs")
 
 </div>
@@ -51,7 +53,7 @@ See [Contributing](/CONTRIBUTING.md) doc.
 
 Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
 
-Original license - [MIT](/LICENSE-source). 
+Original license - [MIT](/LICENSE-source).
 
 This project was forked from the [CloudCannon/jekyll-resize](https://github.com/CloudCannon/jekyll-resize) repo ([jekyll-resize](https://rubygems.org/gems/jekyll-resize) on RubyGems). So that I could use this in my Jekyll 4 project and so others can too.
 
