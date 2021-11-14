@@ -1,11 +1,11 @@
-require 'digest'
+require "digest"
 require "mini_magick"
 
 module Jekyll
   module Resize
     CACHE_DIR = "cache/resize/"
-    OUT_FORMAT = 'webp'
-    FILE_EXT = '.webp'
+    OUT_FORMAT = "webp"
+    FILE_EXT = ".webp"
     HASH_LENGTH = 32
 
     # Read, process, and write out as new image.
