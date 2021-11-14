@@ -3,7 +3,7 @@ require "mini_magick"
 
 module Jekyll
   module Resize
-    DEST_DIR = "cache/resize/"
+    CACHE_DIR = "cache/resize/"
 
     # Read, process, and write out as new image.
     def _process_img(src_path, options, dest_path)
@@ -31,28 +31,29 @@ module Jekyll
     # param source: e.g. "my-image.jpg"
     # param options: e.g. "800x800>"
     #
-    # return dest_path_relative: Relative path for output file.
+    # return dest_path_rel: Relative path for output file.
     def resize(source, options)
       site = @context.registers[:site]
 
       src_path = File.join(site.source, source)
       raise "Image at #{src_path} is not readable" unless File.readable?(src_path)
 
-      dest_dir = File.join(site.source, DEST_DIR)
+      dest_dir = File.join(site.source, CACHE_DIR)
       FileUtils.mkdir_p dest_dir
 
       dest_filename = _dest_filename(src_path, dest_dir, options)
       dest_path = File.join(dest_dir, dest_filename)
+      dest_path_rel = File.join(CACHE_DIR, dest_filename)
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
-        puts "Resizing #{src_path} to #{dest_path} (#{options})"
+        puts "Resizing '#{source}' to '#{dest_path_rel}' - using options: '#{options}'"
 
         _process_img(src_path, options, dest_path)
 
-        site.static_files << Jekyll::StaticFile.new(site, site.source, DEST_DIR, dest_filename)
+        site.static_files << Jekyll::StaticFile.new(site, site.source, CACHE_DIR, dest_filename)
       end
 
-      dest_path_relative = File.join(DEST_DIR, dest_filename)
+      dest_path_rel
     end
   end
 end
