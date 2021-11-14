@@ -25,10 +25,12 @@ module Jekyll
     end
 
     def resize(source, options)
+      # e.g. "my-image.jpg" and "800x800>".
+
       site = @context.registers[:site]
 
       src_path = File.join(site.source, source)
-      raise "#{src_path} is not readable" unless File.readable?(src_path)
+      raise "Image at #{src_path} is not readable" unless File.readable?(src_path)
 
       dest_dir = File.join(site.source, DEST_DIR)
       FileUtils.mkdir_p dest_dir
