@@ -6,7 +6,7 @@ module Jekyll
     def resize(source, options)
       site = @context.registers[:site]
 
-      src_path = site.source + source
+      src_path = File.join(site.source, source)
       raise "#{src_path} is not readable" unless File.readable?(src_path)
 
       dest_dir = "/cache/resize/"
