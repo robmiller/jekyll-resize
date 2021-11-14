@@ -5,6 +5,15 @@ module Jekyll
   module Resize
     DEST_DIR = "cache/resize/"
 
+    def _process_img(src_path, options, dest_path)
+      image = MiniMagick::Image.open(src_path)
+
+      image.strip
+      image.resize options
+
+      image.write dest_path
+    end
+
     def resize(source, options)
       site = @context.registers[:site]
 
@@ -22,14 +31,9 @@ module Jekyll
       dest_path += dest_filename
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
-        puts "Thumbnailing #{src_path} to #{dest_path} (#{options})"
+        puts "Resizing #{src_path} to #{dest_path} (#{options})"
 
-        image = MiniMagick::Image.open(src_path)
-
-        image.strip
-        image.resize options
-
-        image.write dest_path
+        _process_img(src_path, options, dest_path)
 
         site.static_files << Jekyll::StaticFile.new(site, site.source, DEST_DIR, dest_filename)
       end
