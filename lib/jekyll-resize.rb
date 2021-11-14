@@ -2,24 +2,24 @@ require 'digest'
 require "mini_magick"
 
 module Jekyll
+
   module Resize
+    DEST_DIR = "/cache/resize/"
+
     def resize(source, options)
       site = @context.registers[:site]
 
       src_path = File.join(site.source, source)
       raise "#{src_path} is not readable" unless File.readable?(src_path)
 
-      dest_dir = "/cache/resize/"
-      dest_path = site.source + dest_dir
-
+      dest_path = site.source + DEST_DIR
       FileUtils.mkdir_p dest_path
 
+      hash = Digest::SHA256.file src_path
+      img_slug = options.gsub(/[^\da-z]+/i, '')
       extension = File.extname(source)
-      desc = options.gsub(/[^\da-z]+/i, '')
 
-      sha = Digest::SHA256.file src_path
-
-      dest_filename = "#{sha}_#{desc}#{extension}"
+      dest_filename = "#{hash}_#{img_slug}#{extension}"
       dest_path += dest_filename
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
@@ -32,10 +32,10 @@ module Jekyll
 
         image.write dest_path
 
-        site.static_files << Jekyll::StaticFile.new(site, site.source, dest_dir, dest_filename)
+        site.static_files << Jekyll::StaticFile.new(site, site.source, DEST_DIR, dest_filename)
       end
 
-      dest_dir + dest_filename
+      DEST_DIR + dest_filename
     end
   end
 end
