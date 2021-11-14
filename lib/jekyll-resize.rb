@@ -4,8 +4,6 @@ require "mini_magick"
 module Jekyll
   module Resize
     CACHE_DIR = "cache/resize/"
-    OUT_FORMAT = "webp"
-    FILE_EXT = ".webp"
     HASH_LENGTH = 32
 
     # Read, process, and write out as new image.
@@ -14,7 +12,6 @@ module Jekyll
 
       image.strip
       image.resize options
-      image.format OUT_FORMAT
 
       image.write dest_path
     end
@@ -24,8 +21,9 @@ module Jekyll
       hash = Digest::SHA256.file(src_path)
       short_hash = hash.hexdigest()[0, HASH_LENGTH]
       options_slug = options.gsub(/[^\da-z]+/i, "")
+      ext = File.extname(src_path)
 
-      "#{short_hash}_#{options_slug}#{FILE_EXT}"
+      "#{short_hash}_#{options_slug}#{ext}"
     end
 
     # Liquid tag entry-point.
