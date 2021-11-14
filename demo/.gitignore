@@ -1,0 +1,11 @@
+_site/
+
+.jekyll-metadata
+
+.jekyll-cache/
+.sass-cache/
+
+.bundle/
+vendor/
+
+cache/resize/
