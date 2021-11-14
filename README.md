@@ -60,5 +60,14 @@ This project was forked from the [CloudCannon/jekyll-resize](https://github.com/
 Notable changes:
 
 - Updated [jekyll-resize.gemspec](/jekyll-resize.gemspec) to use Jekyll 4.
-- Added `require "mini_magick"` to the [jekyll-resize.rb](/lib/jekyll-resize.rb) file to avoid a runtime error as constant `MiniMagick::Image` not defined (this error was not present on Jekyll 3).
+- Updated [jekyll-resize.rb](/lib/jekyll-resize.rb) file.
+    - Reworded "Thumbnailing" to "Resizing", because this doesn't have to be used to make thumbnails (which are very small).
+    - Reduced hash from 64 to 32 characters long.
+    - Created functions to break up the logic.
+    - Refactored variable names and order of lines.
+    - Forward slash is no longer needed as plugin input or in the configured output directory. Thanks to using `File.join`.
+    - Jekyll 4 fix - added `require "mini_magick"` to avoid a runtime error, as constant `MiniMagick::Image` was not defined.
+    - Added WebP support.
+    - Validation on plugin inputs as non-empty strings, to avoid later errors.
 - Created this `README.md` file and the [docs](/docs/) directory.
+- Created [demo](/demo/) directory as a site for local testing of the plugin.
