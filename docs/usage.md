@@ -12,9 +12,9 @@ resize: OPTIONS
 
 The options could be `"800x800"` or `"800x800>"` for example, setting width and height and using the greater-than sign.
 
-Pass an image path to the filter so it can be resized and saved to `cache/resize/`. 
+Pass an image path to the filter so it can be resized and saved to `cache/resize/`.
 
-The filter will both resize the image and ensure the HTML path points to the generated resized image. 
+The filter will both resize the image and ensure the HTML path points to the generated resized image.
 
 
 ## Passing a path
@@ -69,10 +69,10 @@ After setting up your original images such as in `assets` and setting up your HT
 
 When you run `jekyll build` or `jekyll serve`, you'll see the plugin will log the activity.
 
-Here is says it is reducing an image, showing the original path and then the destination path. The original is untouched. 
+Here is says it is reducing an image, showing the original path and then the destination path. The original is untouched.
 
 ```
-Thumbnailing .../my-project/uploads/1.jpg to .../my-project/cache/resize/c673c80c6...5a92_800x800.jpg (800x800>)
+Resizing 'satelliet.jpg' to 'cache/resize/7f1f902623977ea3b87f9a668945e499_800x800.jpg' - using options: '800x800>'
 ```
 
 The file that gets created has output path has a hash like the one below, but much longer.
@@ -83,6 +83,6 @@ c673c80c6...5a92_800x800.jpg
 
 So you change the output size of the image as many times as you like - you'll get a new output image created.
 
-The output `cache/resize/` directory will be created if necessary and the image will be created in there. 
+The output `cache/resize/` directory will be created if necessary and the image will be created in there.
 
 This `cache` directory would be **excluded** from version control - the output image only matters when building and deploying and you don't need to track the output files.
