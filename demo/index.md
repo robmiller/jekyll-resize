@@ -8,7 +8,7 @@ layout: null
 ## Resized
 
 ```
-{{ my_img | resize: "" }}
+{{ my_img | resize: "800x800>" }}
 ```
 
 ![Test image]({{ my_img | resize: "800x800>" }})
