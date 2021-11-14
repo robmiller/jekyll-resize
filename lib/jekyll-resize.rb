@@ -4,6 +4,7 @@ require "mini_magick"
 module Jekyll
   module Resize
     CACHE_DIR = "cache/resize/"
+    HASH_LENGTH = 32
 
     # Read, process, and write out as new image.
     def _process_img(src_path, options, dest_path)
@@ -19,11 +20,12 @@ module Jekyll
     #
     # e.g. '7f1f9026239...821410_800x800.jpg'
     def _dest_filename(src_path, dest_dir, options)
-      hash = Digest::SHA256.file src_path
-      img_slug = options.gsub(/[^\da-z]+/i, '')
+      hash = Digest::SHA256.file(src_path)
+      short_hash = hash.hexdigest()[0, HASH_LENGTH]
+      options_slug = options.gsub(/[^\da-z]+/i, '')
       extension = File.extname(src_path)
 
-      "#{hash}_#{img_slug}#{extension}"
+      "#{short_hash}_#{options_slug}#{extension}"
     end
 
     # Liquid tag entry-point.
