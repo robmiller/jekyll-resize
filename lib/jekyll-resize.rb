@@ -4,7 +4,7 @@ require "mini_magick"
 module Jekyll
   module Resize
     def resize(source, options)
-      site = @contextension.registers[:site]
+      site = @context.registers[:site]
 
       src_path = site.source + source
       raise "#{src_path} is not readable" unless File.readable?(src_path)
@@ -14,7 +14,7 @@ module Jekyll
 
       FileUtils.mkdir_p dest_path
 
-      extension = File.extensionname(source)
+      extension = File.extname(source)
       desc = options.gsub(/[^\da-z]+/i, '')
 
       sha = Digest::SHA256.file src_path
