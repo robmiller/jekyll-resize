@@ -67,7 +67,6 @@ Notable changes:
     - Refactored variable names and order of lines.
     - Forward slash is no longer needed as plugin input or in the configured output directory. Thanks to using `File.join`.
     - Jekyll 4 fix - added `require "mini_magick"` to avoid a runtime error, as constant `MiniMagick::Image` was not defined.
-    - Added WebP support.
     - Validation on plugin inputs as non-empty strings, to avoid later errors.
 - Created this `README.md` file and the [docs](/docs/) directory.
 - Created [demo](/demo/) directory as a site for local testing of the plugin.
