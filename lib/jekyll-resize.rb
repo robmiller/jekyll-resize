@@ -20,15 +20,15 @@ module Jekyll
       src_path = File.join(site.source, source)
       raise "#{src_path} is not readable" unless File.readable?(src_path)
 
-      dest_path = File.join(site.source, DEST_DIR)
-      FileUtils.mkdir_p dest_path
+      dest_dir = File.join(site.source, DEST_DIR)
+      FileUtils.mkdir_p dest_dir
 
       hash = Digest::SHA256.file src_path
       img_slug = options.gsub(/[^\da-z]+/i, '')
       extension = File.extname(source)
 
       dest_filename = "#{hash}_#{img_slug}#{extension}"
-      dest_path += dest_filename
+      dest_path = File.join(dest_dir, dest_filename)
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
         puts "Resizing #{src_path} to #{dest_path} (#{options})"
