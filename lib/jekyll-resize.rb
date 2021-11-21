@@ -6,6 +6,10 @@ module Jekyll
     CACHE_DIR = "cache/resize/"
     HASH_LENGTH = 32
 
+    def _must_create?(src_path, dest_path)
+      !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
+    end
+
     # Read, process, and write out as new image.
     def _process_img(src_path, options, dest_path)
       image = MiniMagick::Image.open(src_path)
@@ -56,9 +60,10 @@ module Jekyll
       site = @context.registers[:site]
 
       src_path, dest_path,dest_dir, dest_filename, dest_path_rel = _paths(site.source, source, options)
-      FileUtils.mkdir_p dest_dir
 
-      if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
+      FileUtils.mkdir_p(dest_dir)
+
+      if _must_create?(src_path, dest_path)
         puts "Resizing '#{source}' to '#{dest_path_rel}' - using options: '#{options}'"
 
         _process_img(src_path, options, dest_path)
