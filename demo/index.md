@@ -3,7 +3,14 @@ title: Homepage
 layout: null
 ---
 
+# {{ page.title }}
+
 {% assign my_img = 'assets/satelliet.jpg' %}
+
+See also [Subpath][] test page.
+
+[Subpath]: {% link subpath.md %}
+
 
 ## Resized
 
