@@ -11,8 +11,12 @@ my_img: '/assets/satelliet.jpg'
 
 ## Resized
 
+Liquid:
+
 ```
 {{ page.my_img | resize: "800x800>" }}
 ```
+
+Rendered image:
 
 ![Test image]({{ page.my_img | resize: "800x800>" }})
