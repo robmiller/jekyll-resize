@@ -6,20 +6,6 @@ module Jekyll
     CACHE_DIR = "cache/resize/"
     HASH_LENGTH = 32
 
-    def _must_create?(src_path, dest_path)
-      !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
-    end
-
-    # Read, process, and write out as new image.
-    def _process_img(src_path, options, dest_path)
-      image = MiniMagick::Image.open(src_path)
-
-      image.strip
-      image.resize options
-
-      image.write dest_path
-    end
-
     # Generate output image filename.
     def _dest_filename(src_path, options, dest_dir)
       hash = Digest::SHA256.file(src_path)
@@ -43,6 +29,21 @@ module Jekyll
       dest_path_rel = File.join(CACHE_DIR, dest_filename)
 
       return src_path, dest_path, dest_dir, dest_filename, dest_path_rel
+    end
+
+    # Determine whether the image needs to be written.
+    def _must_create?(src_path, dest_path)
+      !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
+    end
+
+    # Read, process, and write out as new image.
+    def _process_img(src_path, options, dest_path)
+      image = MiniMagick::Image.open(src_path)
+
+      image.strip
+      image.resize options
+
+      image.write dest_path
     end
 
     # Liquid tag entry-point.
