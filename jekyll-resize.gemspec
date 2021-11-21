@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'jekyll-resize'
   s.version     = '1.3.0'
-  s.date        = '2020-05-25'
+  s.date        = '2021-11-21'
   s.summary     = 'Liquid filter to resize images in Jekyll 3 and 4'
   s.description = ''
   s.authors     = ['Mike Neumegen', 'Michael Currin']
