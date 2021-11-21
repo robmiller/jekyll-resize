@@ -14,17 +14,25 @@ See also [Subpath][] test page.
 
 ## Resized
 
+Liquid:
+
 ```
 {{ my_img | resize: "200x200>" }}
 ```
+
+Rendered image:
 
 ![Test image]({{ my_img | resize: "200x200>" }})
 
 
 ## Original
 
+Liquid:
+
 ```
 {{ my_img}}
 ```
+
+Rendered image:
 
 ![Test image]({{ my_img }})
