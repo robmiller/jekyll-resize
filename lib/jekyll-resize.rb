@@ -60,7 +60,7 @@ module Jekyll
 
       site = @context.registers[:site]
 
-      src_path, dest_path,dest_dir, dest_filename, dest_path_rel = _paths(site.source, source, options)
+      src_path, dest_path, dest_dir, dest_filename, dest_path_rel = _paths(site.source, source, options)
 
       FileUtils.mkdir_p(dest_dir)
 
