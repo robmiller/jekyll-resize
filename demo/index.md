@@ -15,10 +15,10 @@ See also [Subpath][] test page.
 ## Resized
 
 ```
-{{ my_img | resize: "800x800>" }}
+{{ my_img | resize: "200x200>" }}
 ```
 
-![Test image]({{ my_img | resize: "800x800>" }})
+![Test image]({{ my_img | resize: "200x200>" }})
 
 
 ## Original
