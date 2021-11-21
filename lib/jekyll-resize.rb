@@ -26,6 +26,21 @@ module Jekyll
       "#{short_hash}_#{options_slug}#{ext}"
     end
 
+    # Build the path strings.
+    def _paths(repo_base, img_path, options)
+      src_path = File.join(repo_base, img_path)
+      raise "Image at #{src_path} is not readable" unless File.readable?(src_path)
+
+      dest_dir = File.join(repo_base, CACHE_DIR)
+
+      dest_filename = _dest_filename(src_path, options, dest_dir)
+
+      dest_path = File.join(dest_dir, dest_filename)
+      dest_path_rel = File.join(CACHE_DIR, dest_filename)
+
+      return src_path, dest_path, dest_dir, dest_filename, dest_path_rel
+    end
+
     # Liquid tag entry-point.
     #
     # param source: e.g. "my-image.jpg"
@@ -40,16 +55,8 @@ module Jekyll
 
       site = @context.registers[:site]
 
-      src_path = File.join(site.source, source)
-      raise "Image at #{src_path} is not readable" unless File.readable?(src_path)
-
-      dest_dir = File.join(site.source, CACHE_DIR)
+      src_path, dest_path,dest_dir, dest_filename, dest_path_rel = _paths(site.source, source, options)
       FileUtils.mkdir_p dest_dir
-
-      dest_filename = _dest_filename(src_path, options, dest_dir)
-
-      dest_path = File.join(dest_dir, dest_filename)
-      dest_path_rel = File.join(CACHE_DIR, dest_filename)
 
       if !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
         puts "Resizing '#{source}' to '#{dest_path_rel}' - using options: '#{options}'"
