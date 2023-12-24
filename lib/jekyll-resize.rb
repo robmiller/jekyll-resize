@@ -40,8 +40,9 @@ module Jekyll
     def _process_img(src_path, options, dest_path)
       image = MiniMagick::Image.open(src_path)
 
-      image.strip
+      image.auto_orient
       image.resize options
+      image.strip
 
       image.write dest_path
     end
