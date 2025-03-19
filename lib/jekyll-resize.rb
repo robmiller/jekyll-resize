@@ -11,7 +11,12 @@ module Jekyll
       hash = Digest::SHA256.file(src_path)
       short_hash = hash.hexdigest()[0, HASH_LENGTH]
       options_slug = options.gsub(/[^\da-z]+/i, "")
+
       ext = File.extname(src_path)
+      # If we've been told to override the file format, do so here.
+      /\s+format:\s*(\w+)/.match(options) do |match|
+        ext = "." + match[1]
+      end
 
       "#{short_hash}_#{options_slug}#{ext}"
     end
@@ -40,6 +45,9 @@ module Jekyll
     def _process_img(src_path, options, dest_path)
       image = MiniMagick::Image.open(src_path)
 
+      # Strip any non-ImageMagick options
+      options = options.gsub(/\s*\w+:\s*\w+\s*/, "")
+
       image.auto_orient
       image.resize options
       image.strip
@@ -50,7 +58,7 @@ module Jekyll
     # Liquid tag entry-point.
     #
     # param source: e.g. "my-image.jpg"
-    # param options: e.g. "800x800>"
+    # param options: e.g. "800x800>", "small format:jpg"
     #
     # return dest_path_rel: Relative path for output file.
     def resize(source, options)
