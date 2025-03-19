@@ -62,6 +62,24 @@ image_path: assets/img/hello.jpg
 <img src="{{ page.image_path | resize: '800x800>' | relative_url }}" alt="My image" />
 ```
 
+### Changing file format
+
+If you want to output thumbnails in a different file format, you can pass a format option:
+
+```liquid
+---
+image_path: assets/img/hello.jpg
+---
+
+<img src="{{ page.image_path | resize: '800x800> format: png' | relative_url }}" alt="My image" />
+```
+
+This will create the resized image as a PNG, and produce the following output:
+
+```
+<img src="/my-repo-name/cache/resize/abcdefgh123_800x800.png" alt="My image" />
+```
+
 
 ## Building
 
